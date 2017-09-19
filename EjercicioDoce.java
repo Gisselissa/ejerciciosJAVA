@@ -9,31 +9,30 @@ import java.util.Scanner;
 
 /**
  *
- * @author sebastianurbina
+ * @author alumno
  */
 public class EjercicioDoce {
 
     /**
      * @param args the command line arguments
-     * Se ingresa el importe de un producto importado y se le debe agregar el 35 % de impuestos
-       internos.
-     * 
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int importeProducto;
-        double impuestos;
-        double total;
+        
+        String datoAux;
+        Double importeProducto;
+        Double impuestos;
+        Double total;
         
         Scanner miScanner = new Scanner(System.in);
         
         System.out.println("Ingrese el importe del producto importado: ");
-        importeProducto= miScanner.nextInt();
+        datoAux = miScanner.next();
+        importeProducto = Double.parseDouble(datoAux);
         
-        impuestos = importeProducto * 0.35;
-        total = importeProducto + impuestos;
+        total = 1.35*importeProducto;
         
-        System.out.println("El precio final del producto es " + total);
+        System.out.println("El precio final del producto es: " + total);
         
         
     }
