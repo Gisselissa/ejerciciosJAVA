@@ -20,7 +20,7 @@ public class EjercicioNueve {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int cantidad;
+        /*int cantidad;
         int precio;
         int total;
         
@@ -31,6 +31,26 @@ public class EjercicioNueve {
         
         System.out.println("Ingrese precio: ");
         precio = miScanner.nextInt();
+        
+        total = cantidad * precio;
+        
+        System.out.println("El precio total a pagar es " + total);
+        */
+        
+        String datoAux;
+        Integer cantidad;
+        Double precio;
+        Double total;
+        
+        Scanner miScanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese cantidad: ");
+        datoAux = miScanner.next();
+        cantidad = Integer.parseInt(datoAux);
+        
+        System.out.println("Ingrese precio: ");
+        datoAux = miScanner.next();
+        precio= Double.parseDouble(datoAux);
         
         total = cantidad * precio;
         
