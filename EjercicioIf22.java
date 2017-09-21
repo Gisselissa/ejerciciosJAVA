@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio22;
+package ejercicioif22;
 
 import java.util.Scanner;
 
 /**
  *
- * @author alumno
+ * @author sebastianurbina
  */
-public class Ejercicio22 {
+public class EjercicioIf22 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         Scanner miSc = new Scanner(System.in);
         
         String datoAux;
@@ -28,28 +29,18 @@ public class Ejercicio22 {
         nota = Integer.parseInt(datoAux);
         
         if (nota==10) {
-            //los que 10
             System.out.println("Sos un genio");
         }
         else{
-            //los menores a 10
-            if (nota<10 && nota>7) {
-                //los que 8 y 9
-                System.out.println("Estas entre los mejores");
+            if (nota<10 && nota>=4) {
+                System.out.println("Aprobó");
             }
-            else{
-                //los menores a 8
-                if (nota>5) {
-                    System.out.println("casi bien");
-                }else{
-                    if (nota<4) {
-                        System.out.println("La próxima");
-                    }else{
-                        System.out.println("Casi mal");
-                    }
-                }
+            else {
+                System.out.println("La próxima será...");
             }
         }
-    }
+          
+}
+   
     
 }
