@@ -25,8 +25,7 @@ public class AdivinaElNumero {
         String datoAux;
         int diferencia;
      
-        Integer miNumeroSecreto = 5;
-                //(int) (Math.random()*10)+1;
+        Integer miNumeroSecreto = (int) (Math.random()*10)+1;
      
         //System.out.println("Número secreto " + miNumeroSecreto);
         System.out.println("Ingrese el número");
