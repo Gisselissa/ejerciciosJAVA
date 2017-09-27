@@ -9,19 +9,12 @@ import java.util.Scanner;
 
 /**
  *
- * @author sebastianurbina
+ * @author alumno
  */
 public class AdivinaElNumero {
 
     /**
      * @param args the command line arguments
-     * Informar si: 
-     * a) Si le erró por un punto. Mensaje "Casi casi".
-     * b) Si le erró por dos puntos. Mensaje "Cerca".
-     * c) Si le erró por tres puntos. Mensaje "Ni cerca".
-     * d) Si le erró por cuatro puntos. Mensaje "Bien lejos".
-     * e) Para todos los demás. Mensaje "Sos horrible en este juego".
-     * 
      */
     public static void main(String[] args) {
         // TODO code application logic here
@@ -71,7 +64,7 @@ public class AdivinaElNumero {
             {
                 System.out.println("Te faltó");
                 
-                diferencia = numeroIngresado - miNumeroSecreto;
+                diferencia = miNumeroSecreto - numeroIngresado;
                 
                 switch (diferencia){
                     case 1: System.out.println("Casi casi"); 
