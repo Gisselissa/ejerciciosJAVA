@@ -5,12 +5,11 @@
  */
 package adivinaelnumero;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
  *
- * @author alumno
+ * @author sebastianurbina
  */
 public class AdivinaElNumero {
 
@@ -27,36 +26,14 @@ public class AdivinaElNumero {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner miSc = new Scanner(System.in);
-      /**  
-        String datoAux;
+        
         Integer numero;
-        
-        Random aleatorio = new Random(System.currentTimeMillis());
-        // Producir nuevo int aleatorio entre 0 y 10
-        int intAletorio = aleatorio.nextInt(10);
-        // Más código
-
-        // Refrescar datos aleatorios 
-        aleatorio.setSeed(System.currentTimeMillis());
-        
-        System.out.println("Ingrese el numero");
-        datoAux = miSc.next();
-        numero = Integer.parseInt(datoAux);
-        
-        if (intAletorio==numero) {
-            System.out.println("Acertó el número");
-        }
-        else{
-            System.out.println("No acertó");
-        }
-      
-        **/
+        Integer numeroIngresado;
+        String datoAux;
+        int diferencia;
      
-     Integer numero;
-     Integer numeroIngresado;
-     String datoAux;
-     
-     Integer miNumeroSecreto = (int) (Math.random()*10)+1;
+        Integer miNumeroSecreto = 5;
+                //(int) (Math.random()*10)+1;
      
         //System.out.println("Número secreto " + miNumeroSecreto);
         System.out.println("Ingrese el número");
@@ -69,13 +46,54 @@ public class AdivinaElNumero {
         {
             if (numeroIngresado>miNumeroSecreto) {
                 System.out.println("Te pasaste");
+                
+                diferencia = numeroIngresado - miNumeroSecreto;
+                
+                switch (diferencia){
+                    case 1: System.out.println("Casi casi"); 
+                    break;
+                    
+                    case 2: System.out.println("Cerca");  
+                    break;
+                    
+                    case 3: System.out.println("Ni Cerca");  
+                    break;
+                    
+                    case 4: System.out.println("Bien lejos");
+                    break;
+                    
+                    default: System.out.println("Sos horrible en este juego");
+                    break;
+                           
+                }
+                
             }else 
             {
                 System.out.println("Te faltó");
+                
+                diferencia = numeroIngresado - miNumeroSecreto;
+                
+                switch (diferencia){
+                    case 1: System.out.println("Casi casi"); 
+                    break;
+                    
+                    case 2: System.out.println("Cerca");  
+                    break;
+                    
+                    case 3: System.out.println("Ni Cerca");  
+                    break;
+                    
+                    case 4: System.out.println("Bien lejos");
+                    break;
+                    
+                    default: System.out.println("Sos horrible en este juego");
+                    break;
+                           
+                }
             }
             
         }
-        
+
         
     }
     
