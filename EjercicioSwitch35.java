@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author alumno
+ * @author sebastianurbina
  */
 public class EjercicioSwitch35 {
 
@@ -34,6 +34,7 @@ public class EjercicioSwitch35 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+       
         Scanner miSc = new Scanner(System.in);
         
         
@@ -56,6 +57,7 @@ public class EjercicioSwitch35 {
         if(canLamparas>5)
         {
             PrecioFinal = PrecioBruto * 0.5;
+            System.out.println("Debe pagar " + PrecioFinal);
         }else
         {   
             //los menores a 6
@@ -76,44 +78,32 @@ public class EjercicioSwitch35 {
                     if (marca.equals("ArgentinaLuz") || marca.equals("FelipeLamparas")) 
                     {
                         PrecioFinal = PrecioBruto * 0.75;
+                    }else {
+                        PrecioFinal = PrecioBruto * 0.80;
                     }
             }
         }
+            if (canLamparas==3) {
+                if (marca.equals("ArgentinaLuz")) {
+                    PrecioFinal = PrecioBruto * 0.85;
+                }
+                else{
+                    if (marca.equals("FelipeLamparas")) {
+                        PrecioFinal = PrecioBruto * 0.90;
+                    }else{
+                        PrecioFinal = PrecioBruto * 0.95;
+                    }
+                }
+            }
+  
         
         
         System.out.println("Debe pagar " + PrecioFinal);
         
-        /*
-        switch(canLamparas)
-        {
-            case 1:
-                System.out.println("No obtiene descuento");
-                break;
-                
-            case 2:
-                System.out.println("No obtiene descuento");
-                break;
-            
-             case 3:
-                if()
-                {
-                }
-                break;
-                
-             case 4:
-                System.out.println("No obtiene descuento");
-                break; 
-                
-             case 5:
-                System.out.println("No obtiene descuento");
-                break;
-                
-             case 6:
-                System.out.println("No obtiene descuento");
-                break;
-        }
         
-        */
-    }
+        
+        
+        }
     
 }
+} 
