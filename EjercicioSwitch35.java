@@ -44,6 +44,8 @@ public class EjercicioSwitch35 {
         String marca;
         Integer PrecioBruto;
         Double PrecioFinal=(double)0;
+        Double PrecioConIIBB;
+        Double IIBB;
         
         System.out.println("Ingrese la marca que desea comprar");
         marca = miSc.next();
@@ -95,10 +97,18 @@ public class EjercicioSwitch35 {
                     }
                 }
             }
+            
+            if (PrecioFinal<120) {
+                System.out.println("Debe pagar " + PrecioFinal);
+            }else {
+            PrecioConIIBB = PrecioFinal * 1.10;
+            IIBB = PrecioConIIBB - PrecioFinal;
+                System.out.println("Usted pagó " + PrecioConIIBB + " siendo " + IIBB + " el impuesto que pagó");
+            }
   
+       
         
         
-        System.out.println("Debe pagar " + PrecioFinal);
         
         
         
