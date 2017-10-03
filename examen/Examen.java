@@ -73,6 +73,11 @@ public class Examen {
                 
             case 19:
                 GuiaIf.HacerEjercicio19();
+                break;
+                
+            case 28:
+                GuiaSwitch.HacerEjercicio28();
+                break;
         }
        
         
