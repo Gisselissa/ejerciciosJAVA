@@ -23,9 +23,198 @@ public class EjemploWhile {
         //EjemploWhile.IteracionSinCantidad();
         //EjemploWhile.SalidaPorLogica();
         //EjemploWhile.PedirNumeros();
-        EjemploWhile.MostrarMenu();
+        //EjemploWhile.MostrarMenu();
+        //EjemploWhile.TomarDatosValidos();
+        //EjemploWhile.ContadoresYAcumuladores();
+        //EjemploWhile.NumeroPrimo();
+        EjemploWhile.PrimosDelUnoAlCien();
         
     }//finaliza el main
+    
+    public static void PrimosDelUnoAlCien()
+    {
+        Integer numeroIngresado=1;
+        
+        while(numeroIngresado<101)
+        {
+            
+            Integer contador=2;
+            Integer contadorDivisores=0;
+
+            while (contador<numeroIngresado) 
+            {            
+                if (numeroIngresado%contador==0)
+                {
+                    contadorDivisores++;
+                    break;
+                }
+                contador++;
+            }
+            if (contadorDivisores>0)
+            {
+                //System.out.println("No es primo");
+            }
+            else
+            {
+                System.out.println("Es primo el número :" + numeroIngresado);
+            }
+            numeroIngresado++;
+        }
+    }
+    
+    public static void NumeroPrimo()
+    {
+        Integer numeroIngresado=357;
+        Integer contador=2;
+        Integer contadorDivisores=0;
+        
+        while (contador<numeroIngresado) 
+        {            
+            if (numeroIngresado%contador==0)
+            {
+                contadorDivisores++;
+                break;
+            }
+            contador++;
+        }
+        if (contadorDivisores>0)
+        {
+            System.out.println("No es primo");
+        }
+        else
+        {
+            System.out.println("Es primo");
+        }
+    }
+    
+    public static void ContadoresYAcumuladores()
+    {
+        Integer contador=0;
+        Integer acumulador=0;
+        Integer multiplicador=1;
+        Integer restador=0;
+        Integer contadorPares=0;
+        Integer contadorDiv3=0;
+        
+        while (contador<10) 
+        {   
+            contador++;
+            System.out.println("Número " + contador);
+            acumulador = acumulador + contador;
+            multiplicador = multiplicador * contador;
+            restador = restador - contador;
+            
+            if (contador%2==0) 
+            {
+                contadorPares++;
+            }
+            if (contador%3==0)
+            {
+                contadorDiv3++;
+            }
+        }
+        
+        System.out.println("La suma es " + acumulador);
+        System.out.println("La multiplicación es " + multiplicador);
+        System.out.println("La resta es " + restador);
+        System.out.println("Los pares son " + contadorPares);
+        System.out.println("Los multiplos de 3 son " + contadorDiv3);
+        
+    }
+    
+    
+    /**
+    * Pide los datos de una persona y valida cada uno. 
+    * Datos a pedir: 
+    * nombre
+    * edad(entre 1 y 100)
+    * sexo(f o m)
+    * Estado civil(S: soltero, C: casado, D: divorciado, V: viudo)
+    * nacionalidad (n: nativo, l: latinoamericano, e: europeo, r: resto del mundo)
+    * sueldo (entre 8.000 y 58.000)
+    * dono organos (Si o No). 
+    * clave de no menos de 6 caracteres.
+    */
+    public static void TomarDatosValidos()
+    {
+        Scanner miSc = new Scanner(System.in);
+        
+        String aux;
+        String nombre;
+        Integer edad;
+        String sexo;
+        String estadoCivil;
+        String nacionalidad;
+        Integer sueldo;
+        String donador;
+        String clave;
+        
+        System.out.println("Ingrese su nombre: ");
+        nombre = miSc.next();
+        
+        System.out.println("Ingrese su edad: ");
+        aux = miSc.next();
+        edad = Integer.parseInt(aux);
+        while (edad<1 || edad>100) 
+        {            
+            System.out.println("Ingrese su edad nuevamente: ");
+            aux = miSc.next();
+            edad = Integer.parseInt(aux);
+        }
+        
+        System.out.println("Ingrese su sexo: ");
+        sexo = miSc.next();
+        while (!sexo.equals("f") && !sexo.equals("m")) 
+        {            
+            System.out.println("Ingrese su sexo nuevamente: ");
+            sexo = miSc.next();
+        }
+        
+        System.out.println("Ingrese su estado civil: ");
+        estadoCivil = miSc.next();
+        while (!estadoCivil.equals("s") && !estadoCivil.equals("c") && !estadoCivil.equals("d") && !estadoCivil.equals("v")) 
+        {            
+            System.out.println("Ingrese su estado civil nuevamente: ");
+            estadoCivil = miSc.next();
+        }
+        
+        System.out.println("Ingrese su nacionalidad: ");
+        nacionalidad = miSc.next();
+        while (!nacionalidad.equals("n") && !nacionalidad.equals("l") && !nacionalidad.equals("e") && !nacionalidad.equals("r")) 
+        {            
+            System.out.println("Ingrese su nacionalidad nuevamente: ");
+            nacionalidad = miSc.next();
+        }
+        
+        System.out.println("Ingrese su sueldo: ");
+        aux = miSc.next();
+        sueldo = Integer.parseInt(aux);
+        while (sueldo<8000 || sueldo>58000) 
+        {            
+            System.out.println("Ingrese su sueldo nuevamente: ");
+            aux = miSc.next();
+            sueldo = Integer.parseInt(aux);
+        }
+        
+        System.out.println("Ingrese si es donador: ");
+        donador = miSc.next();
+        while (!donador.equals("s") && !donador.equals("n")) 
+        {            
+            System.out.println("Ingrese si es donador nuevamente: ");
+            donador = miSc.next();
+        }
+        
+        System.out.println("Ingrese una clave con no menos de 6 caracteres");
+        clave = miSc.next();
+        while (clave.length()<6) 
+        {            
+            System.out.println("Ingrese una clave nuevamente: ");
+            clave = miSc.next();
+        }
+        
+        
+    }
+    
     
     /**
      * Pide dos números e informa el promedio.
