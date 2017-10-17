@@ -207,6 +207,38 @@ public class Examen {
                 GuiaWhile.HacerEjercicio45();
                 break;
                 
+            case 46:
+                GuiaWhile.HacerEjercicio46();
+                break;
+                
+            case 47:
+                GuiaWhile.HacerEjercicio47();
+                break;
+                
+            case 48:
+                GuiaWhile.HacerEjercicio48();
+                break;
+                
+            case 49:
+                GuiaWhile.HacerEjercicio49();
+                break;
+                
+            case 50:
+                GuiaWhile.HacerEjercicio50();
+                break;
+                
+            case 51:
+                GuiaWhile.HacerEjercicio51();
+                break;
+                
+            case 52:
+                GuiaWhile.HacerEjercicio52();
+                break;
+                
+            case 53:
+                GuiaWhile.HacerEjercicio53();
+                break;
+                
         }
        
         

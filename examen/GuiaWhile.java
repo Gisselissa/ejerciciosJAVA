@@ -35,6 +35,20 @@ import java.util.Scanner;
  * 45- Pedir edad a un grupo de personas e informar cuando niño, adolescentes y 
  * adultos hay en el grupo, además de informar el promedio de edad.
  * 
+ * 46- Informar si un número es primo o no.
+ * 
+ * 47- Informar todos los números primos del 1 al 1000. 
+ * 
+ * 48-Informar si un número es centro numérico.
+ * 
+ * 50- Informar todos los centro numéricos hasta el millón. 
+ * 
+ * 51-Informar si un número es número perfecto.
+ * 
+ * 52- Informar todos los números perfectos hasta el millón. 
+ * 
+ * 53- mostrar la Sucesión de Fibonacci hasta el 100.
+ * 
  */
 public class GuiaWhile {
     
@@ -325,6 +339,130 @@ public class GuiaWhile {
         System.out.println("Ingresaron " + nino + " niños");
         System.out.println("El promedio de edad es: " + promedio);
         
+    }
+    
+    public static void HacerEjercicio46()
+    {
+        Scanner miSc = new Scanner(System.in);
+        
+        Integer numeroIngresado=0;
+        Integer contador=2;
+        
+        System.out.println("Ingrese un número para saber si es primo");
+        numeroIngresado = miSc.nextInt();
+        
+        while(numeroIngresado%contador!=0)
+        {
+            contador++;
+        }
+        
+        if (contador==numeroIngresado) 
+        {
+            System.out.println("Es primo");
+        }
+        else
+        {
+            System.out.println("No es primo");
+        }
+    }
+    
+    public static void HacerEjercicio47()
+    {
+        Integer numeroIngresado=1;
+        
+        while(numeroIngresado<1000)
+        {
+            
+            Integer contador=2;
+            Integer contadorDivisores=0;
+
+            while (contador<numeroIngresado) 
+            {            
+                if (numeroIngresado%contador==0)
+                {
+                    contadorDivisores++;
+                    break;
+                }
+                contador++;
+            }
+            if (contadorDivisores>0)
+            {
+                //System.out.println("No es primo");
+            }
+            else
+            {
+                System.out.println("Es primo el número :" + numeroIngresado);
+            }
+            numeroIngresado++;
+        }
+    }
+    
+    public static void HacerEjercicio48()
+    {
+        System.out.println("No me salió");
+    }
+    
+    public static void HacerEjercicio49()
+    {
+        System.out.println("No existe, el profe se lo paso");
+    }
+    
+    public static void HacerEjercicio50()
+    {
+        System.out.println("No me salió");
+    }
+    
+    public static void HacerEjercicio51()
+    {
+        Scanner miSc = new Scanner(System.in);
+        
+        Integer numero;
+        Integer suma=0;
+        Integer contador=1;
+         
+        
+        System.out.println("Introduce un número: ");
+        numero = miSc.nextInt();
+        
+        while (contador<numero)
+        {            
+            
+            if (numero%contador==0) 
+            {
+                suma = suma + contador;
+            }
+            
+            contador++;
+        }
+        
+        if (suma == numero) {
+            System.out.println("El número es perfecto");
+        }
+        else 
+        {
+            System.out.println("El número no es perfecto");
+        }
+    }
+    
+    public static void HacerEjercicio52()
+    {
+        System.out.println("No me salió");
+    }
+    
+    public static void HacerEjercicio53()
+    {
+        int num1=0;
+        int num2=1;
+        int suma;
+        int limite=100;
+    
+        while (num2 + num1 <= limite) 
+        {            
+            suma=num1;
+            num1 = num2;
+            num2 = suma + num1;
+            System.out.println(num2);
+        }
     }
     
     
