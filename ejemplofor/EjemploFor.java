@@ -30,7 +30,13 @@ public class EjemploFor {
         //funcionesParaFor.InformarNumerosPrimosDel1al100();
         //funcionesParaFor.CentroNumerico();
         //funcionesParaFor.CentroNumericoDel1Al1000();
-        funcionesParaFor.FibonacciSucesion();
+        //funcionesParaFor.FibonacciSucesion();
+        //funcionesParaFor.RetornarMayor();
+        //funcionesParaFor.SerieFibonacci();
+        //funcionesParaFor.UtnFra();
+        //funcionesParaFor.NumeroArmstrong();
+        //funcionesParaFor.HacerPiramide();
+        funcionesParaFor.EscalonesDeNumero();
         
     }
     

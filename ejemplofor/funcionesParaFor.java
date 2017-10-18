@@ -321,6 +321,7 @@ public class funcionesParaFor {
     
     public static void FibonacciSucesion()
     {
+        //no salió --> ver SerieFibonacci q salió perfecto
         int numero=1;
         int suma=1;
         int anterior=1;
@@ -334,6 +335,171 @@ public class funcionesParaFor {
             anterior=Fibonacci;
             
             System.out.println("Serie " + Fibonacci);
+        }
+    }
+    
+    public static void RetornarMayor()
+    {
+        int numUno=3;
+        int numDos=6;
+        int numTres=9;
+        
+       
+            if (numUno>numDos && numUno>numTres) 
+            {
+                System.out.println("El número mayor es numUno " + numUno);
+            }
+            else
+            {
+                if (numUno<numDos && numUno>numTres) 
+                {
+                    System.out.println("El número mayor es numDos " + numDos);
+                }
+                 else
+                {
+                    System.out.println("El número mayores es numTres " + numTres);
+                }
+            }
+           
+        
+        
+        
+    }
+    
+    public static void SerieFibonacci()
+    {
+        int fibonacci;
+        int actual=1;
+        int anterior=0;
+        
+        for (int contador = 0; contador < 30; contador++) 
+        {
+            
+            fibonacci = anterior + actual;
+            anterior = actual;
+            actual = fibonacci;
+            
+            System.out.println("Es el: " + fibonacci);
+            
+            
+        }
+        
+    }
+    
+    public static void UtnFra()
+    {
+        /**
+         * 1) Recorrer los números del 1 al 100
+         * 2) Mostrar en lugar del número la palabra "UTN" para todos los 
+         * multiplos de 3 (tres).
+         * 3) Mostrar en lugar del número la palabra "FRA" para todos los
+         * multiplos de 5 (cinco).
+         * 4) Mostrar la palabra "UTNFRA" para todos los multiplos de 3 (tres) y 
+         * 5 (cinco) (ejemplo: 15).
+         */
+        //no funciona!!! Verlo de nuevo. 
+        int numero;
+        
+        
+        for (int contador = 1; contador < 100; contador++) 
+        {
+            if (contador%3==0 && contador%5==0) 
+            {
+                System.out.println("UTNFRA");
+            }
+            else
+            {
+                if (contador%3==0) 
+                {
+                    System.out.println("UTN");
+                }
+             
+            }
+            if (contador%5==0)
+            {
+                System.out.println("FRA");
+            }
+            else
+            {
+                System.out.println(contador);
+            }
+        }
+        
+    }
+    
+    /**
+     * 153 = 1^3 + 5^3 + 3^3= 153
+     */
+    public static void NumeroArmstrong()
+    {
+        
+        int numeroIngresado=153;
+        
+        int numero=numeroIngresado;
+        
+        if (numero<0)
+        {
+            numero = numero*-1;
+        }
+        int cantidadDeDigitos=0;
+        while (numero>0) 
+        {            
+            numero = numero / 10;
+            cantidadDeDigitos++;
+        }
+        System.out.println(cantidadDeDigitos);
+        
+        int digito;
+        int suma=0;
+        int auxNumero = numeroIngresado;
+        while (auxNumero>0) 
+        {            
+          digito = auxNumero%10;
+          suma = suma + (int) Math.pow(digito, cantidadDeDigitos);
+          auxNumero = auxNumero/10;
+          System.out.println(digito);  
+        }
+        System.out.println(suma);
+        if (suma==numeroIngresado) {
+            System.out.println("Es Armstrong");
+        }
+        else
+        {
+            System.out.println("No lo es...");
+        }
+    }
+    
+    public static void HacerPiramide()
+    {
+        int cantidadDeFilas=7;
+        for (int contador = 1; contador < cantidadDeFilas; contador++) 
+        {
+            for (int contadorLugares = cantidadDeFilas-1; contadorLugares > contador; contadorLugares--) {
+                System.out.print(" ");
+            }
+                for (int contadorDos = 1; contadorDos <= (2*contador-1); contadorDos++) 
+                {
+                    System.out.print("X");
+                }
+                System.out.println("");
+        }
+        
+        
+    }
+    
+    public static void EscalonesDeNumero()
+    {
+        int cantidadDeFilas=5;
+        int valor=1;
+        for (int contador = 1; contador < cantidadDeFilas; contador++) 
+        {
+            
+                for (int contadorDos = 1; contadorDos <= (2*contador-1); contadorDos++) 
+                {
+                    System.out.print(valor);
+                    valor++;
+                }
+                System.out.println("");
         }
     }
         
