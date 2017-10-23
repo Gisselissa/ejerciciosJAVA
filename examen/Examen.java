@@ -25,7 +25,7 @@ public class Examen {
         
         Integer opcion;
         
-        System.out.println("¿Que ejercicio quiere probar del 1 al 45?");
+        System.out.println("¿Que ejercicio quiere probar del 1 al 73?");
         String Aux=miSc.next();
         opcion= Integer.parseInt(Aux);
         
@@ -237,6 +237,14 @@ public class Examen {
                 
             case 53:
                 GuiaWhile.HacerEjercicio53();
+                break;
+                
+            case 54:
+                GuiaFor.HacerEjercicio54();
+                break;
+                
+            case 55:
+                GuiaFor.HacerEjercicio55();
                 break;
                 
         }
