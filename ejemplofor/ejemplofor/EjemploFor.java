@@ -36,7 +36,14 @@ public class EjemploFor {
         //funcionesParaFor.UtnFra();
         //funcionesParaFor.NumeroArmstrong();
         //funcionesParaFor.HacerPiramide();
-        funcionesParaFor.EscalonesDeNumero();
+        //funcionesParaFor.EscalonesDeNumero();
+        //funcionesParaFor.HacerEjercicio53();
+        //funcionesParaFor.HacerEjercicio54();
+        //funcionesParaFor.MostrarPalindromo();
+        //funcionesParaFor.EjercicioSerieUTNFRA();
+        //funcionesParaFor.HacerEjercicio59();
+        funcionesParaFor.PatronDeLetras();
+        //funcionesParaFor.ImprimirCodigosASCII();
         
     }
     

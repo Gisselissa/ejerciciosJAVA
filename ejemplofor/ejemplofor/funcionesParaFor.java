@@ -502,6 +502,222 @@ public class funcionesParaFor {
                 System.out.println("");
         }
     }
+    
+    public static void HacerEjercicio53()
+    {
+        Scanner miSc = new Scanner(System.in);
+        
+        int numeroIngresado;
+        int cantidadDeDigitos=0;
+        
+        System.out.println("Ingrese un número");
+        numeroIngresado = miSc.nextInt();
+        
+        for (int numero = numeroIngresado; numero > 0; cantidadDeDigitos++) {
+           numero = numero / 10; 
+        }
+       
+        System.out.println("Cantidad de dígitos del número ingresado " + cantidadDeDigitos);
+        
+    }
+    
+     public static void HacerEjercicio54()
+    {
+        Scanner miSc = new Scanner(System.in);
+        
+        int numeroIngresado;
+        int cantidadDeDigitos=0;
+        
+        System.out.println("Ingrese un número");
+        numeroIngresado = miSc.nextInt();
+        
+        for (int numero = numeroIngresado; numero > 0; cantidadDeDigitos++) {
+            numero = numero / 10;
+        }
+         
+        int digito;
+        int suma=0;
+        int auxNumero = numeroIngresado;
+   
+        
+        while (auxNumero>0) 
+        {            
+          digito = auxNumero%10;
+          suma = suma + (int) Math.pow(digito, cantidadDeDigitos);
+          auxNumero = auxNumero/10;
+          System.out.println(digito);  
+        }
+        
+        
+    }
+    
+    public static void MostrarPalindromo()
+    {
+        int numeroReverso;
+        int numero=2367;
+        String numeroEnLetras="";
+        int numeroActual;
+        // proceso...
+        
+    for (int contador=0; numero > 0; contador++) 
+    {
+        numeroActual=numero%10;
+        contador = contador/10;
+        numeroEnLetras=numeroActual+numeroEnLetras;
+    }
+        
+    numeroReverso=Integer.parseInt(numeroEnLetras);
+       
+        /*numeroEnLetras=numeroActual+numeroEnLetras;
+        numeroReverso=7632;*/
+    
+        
+    if (numero==numeroReverso) 
+    {
+        System.out.println("Es palindromo");
+    }
+        else
+        {
+            System.out.println("No es palíndromo");
+        }
+        
+    }
+    
+    public static void EjercicioSerieUTNFRA()
+    {
+        //bandera int bandera=0;
+        for (int numero = 0; numero < 100; numero++) 
+        {
+            if (numero%3==0 && numero%5==0) {
+                System.out.println("UTN-FRAN");
+               //bandera bandera=1;
+            }
+            else
+            {
+                if (numero%3==0) 
+                {
+                    System.out.println("FRA");
+                  //bandera  bandera=1;
+                }
+                if (numero%5==0) 
+                {
+                    System.out.println("UTN");
+                  //bandera  bandera=1;
+                }
+                
+            }
+            //if (numero%5!=0 && numero%3!=0) 
+            //{
+              //  System.out.println(numero);
+            //}
+           //bandera if (bandera==0) {
+           //bandera     System.out.println(numero);
+            //bandera}
+            //banderabandera=0;
+        }
+    }
+    
+    public static void HacerEjercicio59()
+    {
+        int numero=8;
+        int resultado;
+        
+        for (int contador = 1; contador < 11; contador++) {
+            resultado = numero*contador;
+            System.out.println(numero+" * " + contador + " = " + resultado);
+        }
+    }
+    
+    public static void PatronDeLetras()
+    {
+        /*char letra;
+        
+        for (letra = 'A'; letra < 'z'; letra++) {
+            System.out.println(letra);
+            
+        }
+        System.out.println((char)65);
+        */
+        
+        //Una manera de hacer el ejercicio de piramide de letras y poniendo
+        //1 para A, 2 para E, 3 para I, 4 para O, 5 para U. (la de abajo es 
+        //mejor porque no hace falta que conozcas el código ASCII)
+        
+        for (int contador = 65; contador < 91; contador++) 
+        {
+          
+                    
+            for (int i = 65; i <= contador; i++) {
+             
+                 switch(i){
+                    case 65:
+                    System.out.print(1);
+                    break;    
+                    
+                    case 69:
+                    System.out.print(2);
+                    break;
+
+                    case 73:
+                    System.out.print(3);
+                    break;
+
+                    case 79:
+                    System.out.print(4);
+                    break;
+
+                    case 85:
+                    System.out.print(5);
+                    break;
+                    
+
+                    default:
+                         System.out.print((char)i); 
+                }
+
+/*
+                    char letraCasteada=(char)i;
+                    
+                    switch(letraCasteada)
+                    {
+                       case 'A':
+                       System.out.print(1);
+                       break;
+       
+                       case 'E':
+                       System.out.print(2);
+                       break;
+                       
+                       case 'I':
+                       System.out.print(3);
+                       break;
+                       
+                       case 'O':
+                       System.out.print(4);
+                       break;
+                       
+                       case 'U':
+                       System.out.print(5);
+                       break;
+                    
+                       default:
+                       System.out.print((char)i); 
+                }*/
+            }
+            
+            
+            System.out.println();
+            
+            
+        }
+    }
+    
+    public static void ImprimirCodigosASCII()
+    {
+        for (int contador = 0; contador < 150; contador++) {
+            System.out.println(contador + " = " + (char)contador);
+        }
+    }
         
     
     
