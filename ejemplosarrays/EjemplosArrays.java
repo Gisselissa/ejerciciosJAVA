@@ -19,7 +19,7 @@ public class EjemplosArrays {
         //EjemplosArrays.PrimerEjemplo();
         //EjemplosArrays.EjemploDos();
         //EjemplosArrays.TercerEjemplo();
-        EjemplosArrays.InvertirOrden();
+        //EjemplosArrays.InvertirOrden();
         //EjemplosArrays.SacarElMayor();
         //EjemplosArrays.SacarElMenor();
         //EjemplosArrays.SacarLaSuma();
@@ -101,8 +101,7 @@ public class EjemplosArrays {
     }
     
     public static void InvertirOrden()
-    {
-        //desastre: no me salió nada. 
+    { 
         int arrayInicial[]={33,77,55,11};
         int resultadoArray[];
         int largo = arrayInicial.length;
